@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model files (user generated)
+*.h5
+*.keras
+my_model.*
+
+# Dataset directories
+cats-and-dogs-for-classification/
+data/
+dataset/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Test files
+test_*.jpg
+test_*.png
+test_*.jpeg
+test_model.*
