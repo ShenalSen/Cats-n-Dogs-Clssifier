@@ -12,6 +12,9 @@ This repository contains an implementation of a deep learning-based image classi
 ## Project Structure
 - `image_classifier_t_learning.ipynb`: The main notebook containing all the code for downloading data, preprocessing, model building, training, and evaluation.
 - `my_model.keras`: (Generated after training) The saved model for deployment or further use.
+- `predict.py`: Standalone script for making predictions on new images using the trained model.
+- `example_usage.py`: Example script demonstrating programmatic usage of the prediction functionality.
+- `requirements.txt`: List of required Python packages.
 
 ## Getting Started
 
@@ -22,7 +25,12 @@ This repository contains an implementation of a deep learning-based image classi
 ### Required Libraries
 Install the required libraries using pip:
 ```bash
-pip install numpy pandas matplotlib tensorflow opendatasets
+pip install -r requirements.txt
+```
+
+Or install them individually:
+```bash
+pip install numpy pandas matplotlib tensorflow pillow
 ```
 
 ### Steps to Run the Notebook
@@ -31,9 +39,40 @@ pip install numpy pandas matplotlib tensorflow opendatasets
    git clone https://github.com/ShenalSen/Cats-n-Dogs-Clssifier.git
    cd Cats-n-Dogs-Clssifier
    ```
-2. Open the `image_classifier_t_learning.ipynb` notebook.
-3. Provide Kaggle credentials to download the dataset.
-4. Execute the cells step-by-step to preprocess the data, train the model, and evaluate its performance.
+2. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Open the `image_classifier_t_learning.ipynb` notebook.
+4. Provide Kaggle credentials to download the dataset.
+5. Execute the cells step-by-step to preprocess the data, train the model, and evaluate its performance.
+
+### Making Predictions on New Images
+After training the model, you can use the prediction script to classify new images:
+
+```bash
+# Predict a single image
+python predict.py path/to/your/image.jpg
+
+# Predict multiple images
+python predict.py image1.jpg image2.png image3.jpeg
+
+# Use a different model file
+python predict.py --model custom_model.keras image.jpg
+```
+
+The script will output the prediction (cat or dog) and confidence level for each image.
+
+#### Example Output:
+```
+🐱 cat_photo.jpg
+   Prediction: CAT
+   Confidence: 94.2%
+
+🐶 dog_photo.jpg
+   Prediction: DOG
+   Confidence: 87.6%
+```
 
 ## Highlights
 
