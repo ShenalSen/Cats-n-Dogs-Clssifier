@@ -14,6 +14,7 @@ This repository contains an implementation of a deep learning-based image classi
 - `my_model.keras`: (Generated after training) The saved model for deployment or further use.
 - `predict.py`: Standalone script for making predictions on new images using the trained model.
 - `example_usage.py`: Example script demonstrating programmatic usage of the prediction functionality.
+- `demo.py`: Demo script with usage examples and sample image creation.
 - `requirements.txt`: List of required Python packages.
 
 ## Getting Started
@@ -72,6 +73,12 @@ The script will output the prediction (cat or dog) and confidence level for each
 🐶 dog_photo.jpg
    Prediction: DOG
    Confidence: 87.6%
+```
+
+#### Quick Demo
+Run the demo script to see usage examples and create sample images:
+```bash
+python demo.py
 ```
 
 ## Highlights
